@@ -17,10 +17,30 @@ export const wedding = {
     },
 
 
+    story: {
+
+        firstMeet:
+            "2019",
+
+        engagement:
+            "2026",
+
+        wedding:
+            "2027",
+
+    },
+
+
     event: {
-        date: "20 June 2027",
-        day: "Saturday",
-        time: "09.00 WIB",
+
+        date:
+            "20 June 2027",
+
+        day:
+            "Saturday",
+
+        time:
+            "09.00 WIB",
 
         countdownDate:
             "2027-06-20T09:00:00",
@@ -30,30 +50,38 @@ export const wedding = {
 
         maps:
             "https://maps.google.com",
+
     },
 
 
     gallery: [
+
         "/images/gallery-1.webp",
         "/images/gallery-2.webp",
         "/images/gallery-3.webp",
+
     ],
 
 
     gift: {
-        bank: "BCA",
+
+        bank:
+            "BCA",
 
         account:
             "1234567890",
 
         name:
             "Ratna Putri",
+
     },
 
 
     music: {
+
         src:
             "/audio/music.mp3",
+
     },
 
 
