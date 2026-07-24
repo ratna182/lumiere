@@ -5,6 +5,10 @@ export const wedding = {
     },
 
 
+    greeting:
+        "Dengan penuh kebahagiaan kami mengundang Anda untuk hadir di acara pernikahan kami.",
+
+
     bride: {
         firstName: "Ratna",
         fullName: "Ratna Putri",
