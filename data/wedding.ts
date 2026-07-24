@@ -1,19 +1,21 @@
 export const wedding = {
 
+    hero: {
+        image: "/images/cover.webp",
+    },
+
+
     bride: {
         firstName: "Ratna",
         fullName: "Ratna Putri",
+        nickname: "Ratna",
     },
 
 
     groom: {
         firstName: "Andi",
         fullName: "Andi Pratama",
-    },
-
-
-    cover: {
-        image: "/images/cover.webp",
+        nickname: "Andi",
     },
 
 
@@ -48,6 +50,9 @@ export const wedding = {
         location:
             "Ballroom Wedding Venue",
 
+        address:
+            "Jl. Wedding Premium No. 123",
+
         maps:
             "https://maps.google.com",
 
@@ -56,9 +61,11 @@ export const wedding = {
 
     gallery: [
 
-        "/images/gallery-1.webp",
-        "/images/gallery-2.webp",
-        "/images/gallery-3.webp",
+        "/images/gallery/gallery-1.webp",
+
+        "/images/gallery/gallery-2.webp",
+
+        "/images/gallery/gallery-3.webp",
 
     ],
 
@@ -73,6 +80,14 @@ export const wedding = {
 
         name:
             "Ratna Putri",
+
+    },
+
+
+    rsvp: {
+
+        whatsapp:
+            "628123456789",
 
     },
 
