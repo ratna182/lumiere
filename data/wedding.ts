@@ -4,24 +4,30 @@ export const wedding = {
         image: "/images/cover.webp",
     },
 
-
     greeting:
         "Dengan penuh kebahagiaan kami mengundang Anda untuk hadir di acara pernikahan kami.",
-
 
     bride: {
         firstName: "Ratna",
         fullName: "Ratna Putri",
         nickname: "Ratna",
-    },
 
+        photo: "/images/bride.webp",
+
+        father: "Bapak Ratna",
+        mother: "Ibu Ratna",
+    },
 
     groom: {
         firstName: "Andi",
         fullName: "Andi Pratama",
         nickname: "Andi",
-    },
 
+        photo: "/images/groom.webp",
+
+        father: "Bapak Andi",
+        mother: "Ibu Andi",
+    },
 
     story: {
 
@@ -35,7 +41,6 @@ export const wedding = {
             "2027",
 
     },
-
 
     event: {
 
@@ -62,17 +67,13 @@ export const wedding = {
 
     },
 
-
     gallery: [
 
         "/images/gallery/gallery-1.webp",
-
         "/images/gallery/gallery-2.webp",
-
         "/images/gallery/gallery-3.webp",
 
     ],
-
 
     gift: {
 
@@ -87,7 +88,6 @@ export const wedding = {
 
     },
 
-
     rsvp: {
 
         whatsapp:
@@ -95,13 +95,11 @@ export const wedding = {
 
     },
 
-
     music: {
 
         src:
             "/audio/music.mp3",
 
     },
-
 
 };
