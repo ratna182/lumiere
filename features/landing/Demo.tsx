@@ -82,7 +82,7 @@ export function Demo() {
                         </ul>
 
                         <Link
-                            href="/demo/ratna-andi"
+                            href="/demo/ratna-firman"
                             className="group mt-12 inline-flex items-center gap-3 rounded-full border border-gold-500/35 bg-gold-500/[0.07] px-9 py-4 font-caps text-[0.65rem] font-semibold uppercase text-gold-200 backdrop-blur-xl transition-all duration-500 hover:border-gold-400/60 hover:bg-gold-500/15"
                         >
                             Open the Live Invitation

@@ -79,7 +79,7 @@ export function Hero() {
 
                         <div className="mt-11 flex flex-wrap justify-center gap-4 lg:justify-start">
                             <Link
-                                href="/demo/ratna-andi"
+                                href="/demo/ratna-firman"
                                 className="btn-gold inline-flex items-center gap-3 rounded-full px-9 py-4 font-caps text-[0.65rem] font-semibold uppercase"
                             >
                                 View Live Demo

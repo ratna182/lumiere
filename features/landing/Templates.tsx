@@ -103,7 +103,7 @@ export function Templates() {
                                 {/* hover veil */}
                                 <div className="absolute inset-0 flex items-center justify-center bg-[#0a0908]/55 opacity-0 backdrop-blur-[2px] transition-all duration-700 group-hover:opacity-100">
                                     <a
-                                        href="/demo/ratna-andi"
+                                        href="/demo/ratna-firman"
                                         className="btn-gold inline-flex translate-y-4 items-center gap-2.5 rounded-full px-8 py-3.5 font-caps text-[0.62rem] font-semibold uppercase transition-transform duration-700 group-hover:translate-y-0"
                                     >
                                         View Live Demo
