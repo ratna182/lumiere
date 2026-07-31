@@ -2,6 +2,7 @@ export const wedding = {
 
     hero: {
         image: "/images/cover.webp",
+        title: "Wedding Invitation",
     },
 
     greeting:
@@ -12,7 +13,7 @@ export const wedding = {
         fullName: "Ratna Putri",
         nickname: "Ratna",
 
-        photo: "/images/bride.webp",
+        photo: "/images/cover.webp",
 
         father: "Bapak Ratna",
         mother: "Ibu Ratna",
@@ -23,7 +24,7 @@ export const wedding = {
         fullName: "Andi Pratama",
         nickname: "Andi",
 
-        photo: "/images/groom.webp",
+        photo: "/images/cover.webp",
 
         father: "Bapak Andi",
         mother: "Ibu Andi",
@@ -69,9 +70,9 @@ export const wedding = {
 
     gallery: [
 
-        "/images/gallery/gallery-1.webp",
-        "/images/gallery/gallery-2.webp",
-        "/images/gallery/gallery-3.webp",
+        "/images/cover.webp",
+        "/images/bride.webp",
+        "/images/groom.webp",
 
     ],
 
@@ -80,10 +81,10 @@ export const wedding = {
         bank:
             "BCA",
 
-        account:
+        accountNumber:
             "1234567890",
 
-        name:
+        accountName:
             "Ratna Putri",
 
     },
