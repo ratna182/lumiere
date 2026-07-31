@@ -102,7 +102,7 @@ export function Demo() {
 
                         <div className="rule-frame relative rounded-[44px] border border-gold-500/20 bg-gradient-to-b from-[#161209]/80 to-[#0c0a07]/80 p-8 shadow-[0_60px_120px_-40px_rgba(0,0,0,0.9)] backdrop-blur-2xl sm:p-12">
                             <p className="eyebrow mb-8 text-[0.55rem]! text-center text-sand/80">
-                                The Ratna <span className="font-script text-gold-300 normal-case">&</span> Andi Invitation
+                                The Ratna <span className="font-script text-gold-300 normal-case">&</span> Firman Invitation
                             </p>
 
                             <PhonePreview />

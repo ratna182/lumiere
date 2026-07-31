@@ -9,14 +9,14 @@ const pages = [
         type: "cover",
         title: "The Wedding Of",
         name: "Ratna",
-        second: "Andi",
+        second: "Firman",
         button: "Open Invitation",
     },
     {
         type: "couple",
         title: "Bride & Groom",
-        name: "Ratna Pratiwi",
-        second: "Andi Saputra",
+        name: "Ratna Putri",
+        second: "Firman Pratama",
         button: "Our Story",
     },
     {

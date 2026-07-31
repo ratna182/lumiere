@@ -127,7 +127,7 @@ export function Hero() {
                                 Live Experience
                             </p>
                             <p className="mt-1.5 text-sm font-light text-ivory-dim">
-                                Ratna <span className="font-script italic text-gold-300">&</span> Andi
+                                Ratna <span className="font-script italic text-gold-300">&</span> Firman
                             </p>
                         </motion.div>
                     </motion.div>

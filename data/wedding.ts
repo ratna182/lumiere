@@ -20,14 +20,14 @@ export const wedding = {
     },
 
     groom: {
-        firstName: "Andi",
-        fullName: "Andi Pratama",
-        nickname: "Andi",
+        firstName: "Firman",
+        fullName: "Firman Pratama",
+        nickname: "Firman",
 
         photo: "/images/cover.webp",
 
-        father: "Bapak Andi",
-        mother: "Ibu Andi",
+        father: "Bapak Firman",
+        mother: "Ibu Firman",
     },
 
     story: {
