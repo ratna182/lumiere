@@ -13,7 +13,7 @@ const menus = [
         href: "#features",
     },
     {
-        name: "Demo",
+        name: "Experience",
         href: "#demo",
     },
     {
@@ -31,48 +31,44 @@ export function Navbar() {
         <motion.header
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="fixed inset-x-0 top-6 z-50 px-6"
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-x-0 top-5 z-50 px-4 sm:px-6"
         >
-            <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-black/60 px-8 py-5 backdrop-blur-2xl">
-
+            <div className="relative mx-auto flex max-w-7xl items-center justify-between rounded-full border border-gold-500/20 bg-[#0d0b08]/70 px-5 py-3.5 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-2xl sm:px-8 sm:py-4">
                 {/* Logo */}
-
                 <Link href="/" className="group flex items-center gap-3">
+                    <span className="relative flex h-7 w-7 items-center justify-center">
+                        <span className="absolute inset-0 rotate-45 rounded-[7px] border border-gold-500/60 transition-transform duration-500 group-hover:rotate-[135deg]" />
+                        <span className="h-1.5 w-1.5 rotate-45 bg-gold" />
+                    </span>
 
-                    <div className="h-3 w-3 rounded-full bg-amber-400 shadow-[0_0_20px_rgba(251,191,36,.9)]" />
-
-                    <h1 className="heading-font text-3xl text-white transition duration-300 group-hover:text-amber-300">
-                        Lumiere
-                    </h1>
-
+                    <span className="font-caps text-base font-semibold text-ivory transition-colors duration-300 group-hover:text-gold-200">
+                        LUMIERE
+                    </span>
                 </Link>
 
                 {/* Menu */}
-
-                <nav className="hidden items-center gap-10 lg:flex">
-
+                <nav className="hidden items-center gap-9 lg:flex">
                     {menus.map((item) => (
                         <a
                             key={item.name}
                             href={item.href}
-                            className="group relative text-sm font-medium text-neutral-300 transition duration-300 hover:text-white"
+                            className="group relative text-sm font-light tracking-wide text-ivory-dim transition duration-300 hover:text-ivory"
                         >
                             {item.name}
 
-                            <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-amber-400 transition-all duration-300 group-hover:w-full" />
-
+                            <span className="absolute -bottom-2 left-1/2 h-px w-0 -translate-x-1/2 bg-gradient-to-r from-transparent via-gold-400 to-transparent transition-all duration-500 group-hover:w-full" />
                         </a>
                     ))}
-
                 </nav>
 
-                {/* Button */}
-
-                <button className="rounded-full bg-amber-400 px-7 py-3 font-semibold text-black shadow-lg shadow-amber-500/20 transition duration-300 hover:scale-105 hover:bg-amber-300 hover:shadow-amber-400/40">
+                {/* CTA */}
+                <a
+                    href="#pricing"
+                    className="btn-gold hidden rounded-full px-7 py-3 font-caps text-[0.62rem] font-semibold uppercase sm:inline-flex"
+                >
                     Order Now
-                </button>
-
+                </a>
             </div>
         </motion.header>
     );

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { OrnamentDivider } from "@/components/ui/OrnamentDivider";
 
 interface SectionTitleProps {
     subtitle: string;
@@ -13,29 +14,21 @@ export function SectionTitle({
 }: SectionTitleProps) {
     return (
         <motion.div
-            initial={{
-                opacity: 0,
-                y: 40,
-            }}
-            whileInView={{
-                opacity: 1,
-                y: 0,
-            }}
-            viewport={{
-                once: true,
-            }}
-            transition={{
-                duration: 0.8,
-            }}
-            className="mb-16 text-center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="mb-16 text-center md:mb-20"
         >
-            <p className="mb-3 uppercase tracking-[0.4em] text-amber-400 text-sm">
+            <p className="eyebrow mb-6 text-gold-400">
                 {subtitle}
             </p>
 
-            <h2 className="heading-font text-5xl text-white md:text-6xl">
+            <h2 className="heading-font text-5xl font-medium leading-[1.05] text-ivory md:text-6xl">
                 {title}
             </h2>
+
+            <OrnamentDivider className="mt-8" />
         </motion.div>
     );
 }

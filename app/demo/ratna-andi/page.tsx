@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { MotionConfig } from "framer-motion";
 
 import { InvitationGate } from "@/features/wedding/InvitationGate";
 
@@ -14,66 +15,57 @@ import { RSVP } from "@/features/wedding/RSVP";
 import { Maps } from "@/features/wedding/Maps";
 import { Footer } from "@/features/wedding/Footer";
 
-
 import { AudioPlayer } from "@/components/ui/AudioPlayer";
 import { FloatingFlowers } from "@/components/ui/FloatingFlowers";
 
-
 export default function WeddingDemo() {
-
     const [open, setOpen] = useState(false);
 
-
     return (
-        <main className="relative min-h-screen bg-black">
+        <MotionConfig reducedMotion="user">
+            <main className="relative min-h-screen bg-[#0a0908]">
 
+                {/* Opening Invitation */}
+                <InvitationGate
+                    open={open}
+                    onOpen={() => setOpen(true)}
+                />
 
-            {/* Opening Invitation */}
-            <InvitationGate
-                open={open}
-                onOpen={() => setOpen(true)}
-            />
+                {open && (
+                    <>
+                        {/* Background Music */}
+                        <AudioPlayer
+                            src="/audio/music.mp3"
+                            autoPlay
+                        />
 
+                        {/* Decoration */}
+                        <FloatingFlowers />
 
-            {open && (
-                <>
+                        {/* Wedding Sections */}
 
-                    {/* Background Music */}
-                    <AudioPlayer
-                        src="/audio/music.mp3"
-                        autoPlay
-                    />
+                        <Cover />
 
+                        <Couple />
 
-                    {/* Decoration */}
-                    <FloatingFlowers />
+                        <Story />
 
+                        <Event />
 
-                    {/* Wedding Sections */}
+                        <Gallery />
 
-                    <Cover />
+                        <Gift />
 
-                    <Couple />
+                        <RSVP />
 
-                    <Story />
+                        <Maps />
 
-                    <Event />
+                        <Footer />
 
-                    <Gallery />
+                    </>
+                )}
 
-                    <Gift />
-
-                    <RSVP />
-
-                    <Maps />
-
-                    <Footer />
-
-
-                </>
-            )}
-
-
-        </main>
+            </main>
+        </MotionConfig>
     );
 }

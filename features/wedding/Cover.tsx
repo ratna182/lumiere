@@ -3,199 +3,196 @@
 import { motion } from "framer-motion";
 import { Countdown } from "@/components/ui/Countdown";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
+import { OrnamentDivider } from "@/components/ui/OrnamentDivider";
 import { wedding } from "@/data/wedding";
+
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Cover() {
     return (
-        <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#070707]">
-
+        <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#070606]">
             {/* Background */}
             <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                className="absolute inset-0 scale-105 bg-cover bg-center bg-no-repeat"
                 style={{
                     backgroundImage: `url(${wedding.hero.image})`,
                 }}
             />
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/70" />
+            {/* warm cinematic washes */}
+            <div className="absolute inset-0 bg-black/55" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/35 to-[#0a0908]" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#2a0e12]/45 via-transparent to-[#0e2a1f]/35" />
 
-            {/* Glow */}
-            <div className="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-400/10 blur-[180px]" />
+            {/* ember glow */}
+            <div className="pulse-glow absolute left-1/2 top-1/2 h-[760px] w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(212,175,55,0.16),transparent_60%)] blur-3xl" />
 
-            {/* Top Gradient */}
-            <div className="absolute inset-x-0 top-0 h-60 bg-gradient-to-b from-black via-black/60 to-transparent" />
+            {/* top / bottom fade */}
+            <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#0a0908] to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-[#0a0908] via-[#0a0908]/60 to-transparent" />
 
-            {/* Bottom Gradient */}
-            <div className="absolute inset-x-0 bottom-0 h-60 bg-gradient-to-t from-black via-black/60 to-transparent" />
+            {/* hairline invitation frame */}
+            <div className="pointer-events-none absolute inset-4 z-20 rounded-[28px] border border-gold-500/15 sm:inset-6" />
+            <div className="pointer-events-none absolute inset-7 z-20 hidden rounded-[24px] border border-gold-500/8 sm:block" />
 
             <motion.div
-                initial={{
-                    opacity: 0,
-                    y: 50,
-                }}
-                animate={{
-                    opacity: 1,
-                    y: 0,
-                }}
-                transition={{
-                    duration: 1,
-                }}
-                className="relative z-20 mx-auto flex max-w-4xl flex-col items-center px-6 text-center"
+                initial="hidden"
+                animate="show"
+                className="relative z-30 mx-auto flex max-w-4xl flex-col items-center px-6 pb-28 pt-36 text-center"
             >
+                {/* eyebrow */}
                 <motion.p
-                    initial={{
-                        opacity: 0,
-                        letterSpacing: "0.8em",
+                    variants={{
+                        hidden: { opacity: 0, letterSpacing: "0.9em" },
+                        show: {
+                            opacity: 1,
+                            letterSpacing: "0.45em",
+                            transition: { duration: 1.4, ease },
+                        },
                     }}
-                    animate={{
-                        opacity: 1,
-                        letterSpacing: "0.45em",
-                    }}
-                    transition={{
-                        delay: 0.3,
-                        duration: 0.8,
-                    }}
-                    className="text-xs uppercase tracking-[0.45em] text-amber-400 md:text-sm"
+                    className="eyebrow text-gold-shimmer"
                 >
                     {wedding.hero.title}
                 </motion.p>
 
+                {/* names */}
                 <motion.h1
-                    initial={{
-                        opacity: 0,
-                        scale: 0.95,
+                    variants={{
+                        hidden: { opacity: 0, y: 34, scale: 0.98 },
+                        show: {
+                            opacity: 1,
+                            y: 0,
+                            scale: 1,
+                            transition: { duration: 1.4, ease },
+                        },
                     }}
-                    animate={{
-                        opacity: 1,
-                        scale: 1,
-                    }}
-                    transition={{
-                        delay: 0.5,
-                        duration: 0.8,
-                    }}
-                    className="heading-font mt-10 text-6xl font-semibold text-white md:text-8xl"
+                    className="heading-font mt-12 text-6xl font-medium leading-[0.95] text-ivory drop-shadow-[0_10px_40px_rgba(0,0,0,0.8)] sm:text-8xl md:text-9xl"
                 >
                     {wedding.bride.firstName}
                 </motion.h1>
 
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.8 }}
-                    className="my-5 text-5xl text-amber-400"
+                    variants={{
+                        hidden: { opacity: 0, scale: 0.5, rotate: -12 },
+                        show: {
+                            opacity: 1,
+                            scale: 1,
+                            rotate: 0,
+                            transition: { duration: 1.1, ease },
+                        },
+                    }}
+                    className="relative my-2 sm:my-3"
                 >
-                    &
+                    <span className="font-script text-gold-gradient block -rotate-3 text-7xl italic sm:text-8xl md:text-9xl">
+                        &amp;
+                    </span>
                 </motion.div>
+
                 <motion.h1
-                    initial={{
-                        opacity: 0,
-                        scale: 0.95,
+                    variants={{
+                        hidden: { opacity: 0, y: 34, scale: 0.98 },
+                        show: {
+                            opacity: 1,
+                            y: 0,
+                            scale: 1,
+                            transition: { duration: 1.4, ease },
+                        },
                     }}
-                    animate={{
-                        opacity: 1,
-                        scale: 1,
-                    }}
-                    transition={{
-                        delay: 1,
-                        duration: 0.8,
-                    }}
-                    className="heading-font text-6xl font-semibold text-white md:text-8xl"
+                    className="heading-font text-6xl font-medium leading-[0.95] text-ivory drop-shadow-[0_10px_40px_rgba(0,0,0,0.8)] sm:text-8xl md:text-9xl"
                 >
                     {wedding.groom.firstName}
                 </motion.h1>
 
-                <div className="mx-auto my-10 h-px w-40 bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
+                <motion.div
+                    variants={{
+                        hidden: { opacity: 0, scaleX: 0.4 },
+                        show: {
+                            opacity: 1,
+                            scaleX: 1,
+                            transition: { duration: 1.2, ease },
+                        },
+                    }}
+                    className="mt-12 w-full"
+                >
+                    <OrnamentDivider />
+                </motion.div>
 
+                {/* date */}
                 <motion.p
-                    initial={{
-                        opacity: 0,
+                    variants={{
+                        hidden: { opacity: 0 },
+                        show: {
+                            opacity: 1,
+                            transition: { duration: 1.2, delay: 0.2, ease },
+                        },
                     }}
-                    animate={{
-                        opacity: 1,
-                    }}
-                    transition={{
-                        delay: 1.2,
-                    }}
-                    className="text-lg uppercase tracking-[0.35em] text-neutral-300"
+                    className="eyebrow mt-10 text-gold-300"
                 >
                     {wedding.event.day}
                 </motion.p>
 
                 <motion.h2
-                    initial={{
-                        opacity: 0,
+                    variants={{
+                        hidden: { opacity: 0, y: 20 },
+                        show: {
+                            opacity: 1,
+                            y: 0,
+                            transition: { duration: 1.2, delay: 0.35, ease },
+                        },
                     }}
-                    animate={{
-                        opacity: 1,
-                    }}
-                    transition={{
-                        delay: 1.4,
-                    }}
-                    className="heading-font mt-3 text-4xl text-white md:text-5xl"
+                    className="heading-font mt-4 text-4xl font-medium text-ivory sm:text-5xl md:text-6xl"
                 >
                     {wedding.event.date}
                 </motion.h2>
 
                 <motion.p
-                    initial={{
-                        opacity: 0,
+                    variants={{
+                        hidden: { opacity: 0 },
+                        show: {
+                            opacity: 1,
+                            transition: { duration: 1.2, delay: 0.55, ease },
+                        },
                     }}
-                    animate={{
-                        opacity: 1,
-                    }}
-                    transition={{
-                        delay: 1.6,
-                    }}
-                    className="mx-auto mt-8 max-w-2xl leading-8 text-neutral-300"
+                    className="mx-auto mt-8 max-w-xl text-base font-light leading-8 text-ivory-dim/90 sm:text-lg"
                 >
                     {wedding.greeting}
                 </motion.p>
 
-                {/* Countdown */}
-
-                <Countdown
-                    targetDate={wedding.event.countdownDate}
-                />
+                {/* countdown */}
+                <Countdown targetDate={wedding.event.countdownDate} />
 
                 <motion.div
-                    initial={{
-                        opacity: 0,
-                        y: 20,
+                    variants={{
+                        hidden: { opacity: 0, y: 20 },
+                        show: {
+                            opacity: 1,
+                            y: 0,
+                            transition: { duration: 1, delay: 0.3, ease },
+                        },
                     }}
-                    animate={{
-                        opacity: 1,
-                        y: 0,
-                    }}
-                    transition={{
-                        delay: 2,
-                    }}
-                    className="mt-12"
+                    className="mt-14"
                 >
-                    <PrimaryButton>
-                        Save The Date
-                    </PrimaryButton>
+                    <PrimaryButton>Save The Date</PrimaryButton>
                 </motion.div>
 
+                {/* scroll cue */}
                 <motion.div
                     animate={{
                         y: [0, 10, 0],
+                        opacity: [0.5, 1, 0.5],
                     }}
                     transition={{
                         repeat: Infinity,
-                        duration: 2,
+                        duration: 2.6,
+                        ease: "easeInOut",
                     }}
-                    className="mt-20 flex flex-col items-center"
+                    className="mt-24 flex flex-col items-center"
                 >
-                    <p className="text-xs uppercase tracking-[0.4em] text-neutral-500">
+                    <p className="eyebrow text-[0.6rem]! text-sand">
                         Scroll
                     </p>
-
-                    <div className="mt-4 text-3xl text-amber-400">
-                        ↓
-                    </div>
+                    <span className="mt-4 block h-10 w-px bg-gradient-to-b from-gold-400/80 to-transparent" />
                 </motion.div>
-
             </motion.div>
         </section>
     );

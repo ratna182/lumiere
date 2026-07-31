@@ -27,17 +27,17 @@ export function CopyButton({ text }: CopyButtonProps) {
     return (
         <button
             onClick={handleCopy}
-            className="flex items-center justify-center gap-2 rounded-full bg-amber-400 px-5 py-3 font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-amber-300"
+            className="btn-gold inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5 font-caps text-[0.7rem] font-semibold uppercase tracking-[0.24em]"
         >
             {copied ? (
                 <>
-                    <Check size={18} />
+                    <Check size={16} />
                     Copied
                 </>
             ) : (
                 <>
-                    <Copy size={18} />
-                    Copy
+                    <Copy size={16} />
+                    Copy Number
                 </>
             )}
         </button>

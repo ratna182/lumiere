@@ -15,23 +15,22 @@ export function GlassCard({
     return (
         <motion.div
             whileHover={{
-                y: -8,
-                scale: 1.02,
+                y: -6,
             }}
             transition={{
-                duration: 0.3,
+                duration: 0.4,
+                ease: [0.22, 1, 0.36, 1],
             }}
             className={`
-        rounded-[36px]
-        border
-        border-white/10
-        bg-white/5
-        backdrop-blur-xl
-        shadow-2xl
-        shadow-black/30
+        lux-glass
+        relative
+        overflow-hidden
+        rounded-[28px]
         ${className}
       `}
         >
+            {/* top hairline highlight */}
+            <span className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-gold-200/60 to-transparent" />
             {children}
         </motion.div>
     );

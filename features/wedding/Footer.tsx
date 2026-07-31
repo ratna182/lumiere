@@ -3,127 +3,48 @@
 import { motion } from "framer-motion";
 
 import { wedding } from "@/data/wedding";
+import { OrnamentDivider } from "@/components/ui/OrnamentDivider";
 
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Footer() {
-
     return (
-        <footer className="relative overflow-hidden bg-black py-20">
-
-
-            <div
-                className="
-          absolute
-          left-1/2
-          top-0
-          h-[400px]
-          w-[400px]
-          -translate-x-1/2
-          rounded-full
-          bg-amber-400/10
-          blur-[160px]
-        "
-            />
-
+        <footer className="relative overflow-hidden bg-[#080707] py-28">
+            <div className="absolute left-1/2 top-0 h-[400px] w-[700px] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse,rgba(212,175,55,0.1),transparent_62%)] blur-3xl" />
 
             <motion.div
-
-                initial={{
-                    opacity: 0,
-                    y: 40,
-                }}
-
-                whileInView={{
-                    opacity: 1,
-                    y: 0,
-                }}
-
-                viewport={{
-                    once: true,
-                }}
-
-                transition={{
-                    duration: 0.8,
-                }}
-
-                className="
-          relative
-          z-10
-          mx-auto
-          max-w-3xl
-          px-6
-          text-center
-        "
-
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 1.1, ease }}
+                className="relative z-10 mx-auto max-w-3xl px-6 text-center"
             >
-
-                <p
-                    className="
-            text-sm
-            uppercase
-            tracking-[0.5em]
-            text-amber-400
-          "
-                >
+                <p className="eyebrow text-gold-400">
                     Thank You
                 </p>
 
-
-                <h2
-                    className="
-            heading-font
-            mt-8
-            text-6xl
-            text-white
-          "
-                >
+                <h2 className="heading-font mt-10 text-5xl font-medium leading-tight text-ivory sm:text-7xl">
                     {wedding.bride.firstName}
-                    <span className="mx-4 text-amber-400">
-                        &
+                    <span className="font-script text-gold-gradient mx-4 inline-block -rotate-3 text-5xl italic sm:text-6xl">
+                        &amp;
                     </span>
                     {wedding.groom.firstName}
                 </h2>
 
-
-                <p
-                    className="
-            mt-8
-            text-neutral-400
-          "
-                >
-                    Terima kasih atas doa dan kehadiran
-                    Anda di hari bahagia kami.
+                <p className="font-script mt-8 text-3xl italic text-gold-300">
+                    With love, from the two of us
                 </p>
 
-
-                <div
-                    className="
-            mx-auto
-            mt-12
-            h-px
-            w-32
-            bg-gradient-to-r
-            from-transparent
-            via-amber-400
-            to-transparent
-          "
-                />
-
-
-                <p
-                    className="
-            mt-8
-            text-sm
-            text-neutral-500
-          "
-                >
-                    © 2027 Lumiere Wedding Invitation
+                <p className="mx-auto mt-4 max-w-md font-light leading-8 text-sand">
+                    Terima kasih atas doa dan kehadiran Anda di hari bahagia kami.
                 </p>
 
+                <OrnamentDivider label="fin" className="mt-12" />
 
+                <p className="mt-10 text-xs uppercase tracking-[0.35em] text-sand/80">
+                    © 2027 · Crafted by Lumiere
+                </p>
             </motion.div>
-
-
         </footer>
     );
 }

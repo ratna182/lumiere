@@ -15,20 +15,20 @@ export function PrimaryButton({
         <button
             onClick={onClick}
             className="
-      rounded-full
-      bg-amber-400
-      px-8
-      py-4
-      font-semibold
-      text-black
-      transition-all
-      duration-300
-      hover:scale-105
-      hover:bg-amber-300
-      active:scale-95
-      shadow-lg
-      shadow-amber-500/20
-      "
+                btn-gold
+                inline-flex
+                items-center
+                justify-center
+                gap-3
+                rounded-full
+                px-10
+                py-4
+                font-caps
+                text-xs
+                font-semibold
+                uppercase
+                tracking-[0.28em]
+            "
         >
             {children}
         </button>
